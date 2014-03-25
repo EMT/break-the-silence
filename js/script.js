@@ -49,7 +49,7 @@ $(function() {
                 if (data && data.like && data.like.id) {
                     var selector = '[data-like-count=' + data.like.key + ']',
                         count = $(selector).text() || 0;
-                    $(selector).text(count + 1);
+                    $(selector).text((count * 1) + 1);
                 }
             },
             'json'

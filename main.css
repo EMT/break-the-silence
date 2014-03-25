@@ -242,7 +242,7 @@ nav ul {
   -moz-box-sizing: border-box; }
 
 .video-wrapper input[type='submit'] {
-  margin: 0;
+  margin: 0 0 20px;
   display: block;
   min-width: 120px;
   float: left;
@@ -255,7 +255,8 @@ nav ul {
 
 .error-message, .success-message {
   float: left;
-  color: #FCD20A; }
+  color: #FCD20A;
+  clear: both; }
 
 .subtitle-wrapper {
   background: #e6e6de;

@@ -13,6 +13,7 @@
 	display:block;
 	margin-bottom:10px;
 }
+
 .video-wrapper input[type='text']{
 	display: block;
     max-width: 460px;
@@ -27,7 +28,7 @@
 }
 
 .video-wrapper input[type='submit']{
-	margin:0;
+	margin:0 0 20px;
 	display: block;
 	min-width:120px;
 	float: left;
@@ -43,6 +44,7 @@
 .error-message, .success-message{
 	float:left;
 	color:#FCD20A;
+	clear:both;
 }
 
 .subtitle-wrapper{

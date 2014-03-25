@@ -1,0 +1,84 @@
+.video-wrapper{
+	background:$video-wrapper-background;
+	padding:40px 0 100px;
+	color:$video-wrapper;
+}
+
+.video-wrapper iframe{
+	margin-bottom:80px;
+	max-width:100%;
+}
+
+.video-wrapper label{
+	display:block;
+	margin-bottom:10px;
+}
+.video-wrapper input[type='text']{
+	display: block;
+    max-width: 460px;
+    margin: 0 40px 20px 0;
+    width: 100%;
+    float: left;
+    border: none;
+    border-radius: 0;
+    padding:10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.video-wrapper input[type='submit']{
+	margin:0;
+	display: block;
+	min-width:120px;
+	float: left;
+	border:none;
+	-webkit-appearance: none;
+	color: rgb(255, 255, 255);
+	background: rgb(189, 190, 180);
+	padding: 10px 15px;
+	cursor:pointer;
+
+}
+
+.error-message, .success-message{
+	float:left;
+	color:#FCD20A;
+}
+
+.subtitle-wrapper{
+	background:$subtitle-wrapper-background;
+	text-align:center;
+}
+
+.comments-wrapper{
+	background:$comments-wrapper-background;
+	padding:20px 0 60px;
+}
+
+
+//http://alistapart.com/article/creating-intrinsic-ratios-for-video
+.wrapper-with-intrinsic-ratio {
+	position: relative;
+	padding-bottom: 56.25%; //ensures that the height is 9/16 of the width
+	height: 0;
+
+	margin-bottom:80px;
+}
+
+.element-to-stretch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.subtitle-wrapper{
+	padding:30px 0;
+
+	h2{
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+

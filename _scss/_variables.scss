@@ -1,0 +1,57 @@
+$gray-darker:            #333;
+$gray-dark:              #4D4D4D;
+$gray:                   #E6E6DE;
+$gray-light:             #F5F5F2;
+// $gray-lighter:           #eee;
+
+
+
+
+$header-background: #fff;
+$nav-background: $gray;
+$footer-background: $gray;
+
+
+//home page
+//video
+$video-wrapper-background: $gray-darker;
+$video-wrapper: #fff;
+
+//subtitle
+$subtitle-wrapper-background:$gray;
+
+//comments
+$comments-wrapper-background: #fff;
+
+//tiles
+$tiles-wrapper-background: $gray-light;
+$tile-background: #fff;
+$tile-title: $gray-darker;
+
+//concepts
+$concept-wrapper-background: $gray-light;
+
+
+$inner-wrapper-width:    1030px;
+
+
+//typography
+$font-family-base: franklin-gothic-urw, arial, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 24px;
+$text-color:$gray-darker;
+//links
+$link-color:$gray-darker;
+$link-hover-color:$gray-dark;
+//headings
+$headings-font-weight: 700;
+$headings-line-height: 30px;
+$headings-color: $gray-darker;
+
+$font-size-h1: 30px;
+$font-size-h3: 20px;
+
+
+$line: $gray-darker;
+
+$muted: mix($gray,#000,70%);

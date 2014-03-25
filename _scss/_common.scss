@@ -1,0 +1,42 @@
+img,iframe{
+	display:block;
+}
+
+.inner-wrapper{
+	margin:0 auto;
+	padding:0 40px;
+	max-width: $inner-wrapper-width;
+}
+
+// .narrow-wrapper{
+// 	max-width:670px;
+// 	padding:0 40px;
+// 	margin:0 auto;
+// }
+
+.narrow{
+	// max-width:670px;
+	max-width:630px;
+}
+
+.muted{
+	color: $muted!important;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.line{
+	border-top:solid 1px $line;
+	padding-top:10px;
+}

@@ -1,0 +1,30 @@
+---
+title: Concepts
+layout: default
+permalink: /ideas/
+---
+
+<div class="concept-tiles">
+	<div class="inner-wrapper">
+		{% for post in site.posts %}
+			<a href="{{ post.url }}" class="tile {% cycle 'first', 'second', 'third' %} {% cycle 'odd', 'even' %}">
+				{% if post.blurb %}
+				<div class="blurb-wrapper">
+					<div class="blurb">
+						<p>{{post.blurb}}</p>
+					</div>
+				</div>
+				{% else %}
+					<img class="thumbnail" src="/images/concepts/thumbnails/{{ post.image }}" alt="#">
+				{% endif %}
+				<!-- <img class="thumbnail" src="/images/concepts/thumbnails/{{ post.image }}" alt="#"> -->
+				<div class="tile-text-wrapper clearfix">
+					<h3>{{ post.title }}</h3>
+					<!-- <p class="blurb">{{ post.blurb }}</p> -->
+					<p class="muted add-your-voice">Add your voice <img class="heart" src="/images/heart.png" alt="" width='30'><span class="like-count" data-like-count="{{ post.id }}">0</span></p>
+					
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+</div>

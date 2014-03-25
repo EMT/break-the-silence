@@ -1,0 +1,29 @@
+nav{
+	background:$nav-background;
+	overflow:hidden;
+	// height:30px;
+	padding:20px 0;
+}
+
+nav h2, nav li{
+	font-weight:normal;
+	float:left;
+	line-height:30px;
+}
+
+nav h2 a{
+	color:#777;
+}
+
+nav ul{
+	float:right;
+}
+
+@media screen and (max-width: 600px) {
+	nav h2{
+		float:none;
+	}
+	nav ul{
+		float:left;
+	}
+}

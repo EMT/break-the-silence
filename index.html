@@ -52,84 +52,58 @@ layout: default
 			And sign up if you’d like to see the finished film and stay involved with the project.
 		</p>
 
-<!-- 		<form action="" class="clearfix">
-			<label for="email">Email</label>
-			<input type="text" id='email' name='email'>
-			<input type="submit" value="Submit">
-		</form> -->
-
-		<!-- <iframe src="https://docs.google.com/a/madebyfieldwork.com/forms/d/1peqyv7fyD0O9ngr8ZCBGtyQpfrCPdqSua9Wxy-svljw/viewform?embedded=true" width="760" height="200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
-
-
 
 		<div class="success-message" style='display:none;'>Your email address has successfully been submitted.</div>
 
-		<form class="clearfix" action="https://docs.google.com/a/madebyfieldwork.com/forms/d/1peqyv7fyD0O9ngr8ZCBGtyQpfrCPdqSua9Wxy-svljw/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
-			<div role="list">
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="ltr" class="ss-item ss-item-required ss-text">
-						<div class="ss-form-entry">
-							<label class="ss-q-item-label" for="entry_1308366642">
-							<label for="itemView.getDomIdToLabel()" aria-label="(Required field)">Email Address</label>
-							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-							</label>
-							<input type="text" name="entry.1308366642" value="" class="ss-q-short" id="entry_1308366642" dir="auto" aria-label="  Please enter a valid email address" aria-required="true" required="" title="Please enter a valid email address">
-						</div>
-					</div>
-				</div>
-			</div>
-			<input type="hidden" name="draftResponse" value="[,,&quot;-6409216809671816641&quot;]
-			">
-			<input type="hidden" name="pageHistory" value="0">
-			<input type="hidden" name="fromEmail" value="false">
-			<input type="hidden" name="fbzx" value="-6409216809671816641">
-			<input type="submit" name="submit" value="Submit" id="ss-submit">
-			<div class="error-message" style='display:none;'>Please enter a valid email address</div>
+		<form action="http://madebyfieldwork.us5.list-manage.com/subscribe/post-json?u=ddaef69afc0d488b89fd489d5&amp;id=ff6dd0064b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate clearfix" target="_blank" novalidate>
+		    <label for="email">Email Address </label>
+		    <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+		    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 		</form>
 
 
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>
-		//https://wiki.base22.com/pages/viewpage.action?pageId=72942000
-		function validateEmail(email) {
-		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		    return re.test(email);
-		}
 
-		function postContactToGoogle(){
+			$(document).ready( function () {
+			    // I only have one form on the page but you can be more specific if need be.
+			    var $form = $('form');
 
-		    var email = $('#entry_1308366642').val();
+			    if ( $form.length > 0 ) {
+			        $('form').on('submit', function ( event ) {
+			            if ( event ) event.preventDefault();
+			            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+			            // if ( validate_input($form) ) {
+			            	register($form);
+			            // }
+			        });
+			    }
+			});
 
-		    if ((email !== "") && (validateEmail(email))) {
-		        $.ajax({
-		            url: "https://docs.google.com/a/madebyfieldwork.com/forms/d/1peqyv7fyD0O9ngr8ZCBGtyQpfrCPdqSua9Wxy-svljw/formResponse",
-		            data: {"entry.1308366642" : email},
-		            type: "POST",
-		            dataType: "jsonp",
-		            statusCode: {
-		                0: function (){
+			function register($form) {
+			    $.ajax({
+			        type: $form.attr('method'),
+			        url: $form.attr('action'),
+			        data: $form.serialize(),
+			        cache       : false,
+			        dataType    : 'jsonp',
+			        jsonpCallback: '?',
+			        contentType: "application/json; charset=utf-8",
+                    statusCode: {
+                        0: function (){
 
-		                    $('#email').val("");
-		                },
-		                200: function (){
-		                    $('#email').val("");
-		                    $("form").hide(200);
-		                    $(".success-message").show(200);
-		                    //Success Message
-		                }
-		            }
-		        });
-		    } else {
-		        $(".error-message").css("display", "block");
-		    }
-		}
-
-		$("input[type='submit']").click(function(e){
-			e.preventDefault();
-		    postContactToGoogle();
-		    return false;
-		});
+                            $('#email').val("");
+                        },
+                        200: function (){
+                            $('#email').val("");
+                            $("form").hide(200);
+                            $(".success-message").show(200);
+                            //Success Message
+                        }
+                    }
+			    });
+			}
 
 		</script>
 
